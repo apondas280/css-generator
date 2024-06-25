@@ -2826,16 +2826,12 @@
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">sandbox client id</label>
                                                 <input type="text" name="sandbox_client_id"
-                                                    class="form-control ol-form-control"
-                                                    value="AfGaziKslex-scLAyYdDYXNFaz2aL5qGau-SbDgE_D2E80D3AFauLagP8e0kCq9au7W4IasmFbirUUYc"
-                                                    required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">sandbox secret key</label>
                                                 <input type="text" name="sandbox_secret_key"
-                                                    class="form-control ol-form-control"
-                                                    value="EMa5pCTuOpmHkhHaCGibGhVUcKg0yt5-C3CzJw-OWJCzaXXzTlyD17SICob_BkfM_0Nlk7TWnN42cbGz"
-                                                    required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">production client id</label>
@@ -2867,8 +2863,7 @@
                                     <div class="ol-card-body">
                                         <form action="#/admin/payment_settings/update" method="post"
                                             enctype="multipart/form-data">
-                                            <input type="hidden" name="_token"
-                                                value="JfYCcMGyl6mvFyH38eQllRZtSf7rf1mxFMYkAXKW" autocomplete="off">
+                                            <input type="hidden" name="_token" autocomplete="off">
                                             <input type="hidden" name="identifier" value="stripe">
 
                                             <div class="fpb-7 mb-3">
@@ -2908,26 +2903,22 @@
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
-                                                    class="form-control ol-form-control"
-                                                    value="pk_test_c6VvBEbwHFdulFZ62q1IQrar" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
-                                                    class="form-control ol-form-control"
-                                                    value="sk_test_9IMkiM6Ykxr1LCe2dJ3PgaxS" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">public live key</label>
                                                 <input type="text" name="public_live_key"
-                                                    class="form-control ol-form-control"
-                                                    value="pk_live_xxxxxxxxxxxxxxxxxxxxxxxx" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">secret live key</label>
                                                 <input type="text" name="secret_live_key"
-                                                    class="form-control ol-form-control"
-                                                    value="sk_live_xxxxxxxxxxxxxxxxxxxxxxxx" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
 
                                             <div class="row">
@@ -2946,8 +2937,7 @@
                                     <div class="ol-card-body">
                                         <form action="#/admin/payment_settings/update" method="post"
                                             enctype="multipart/form-data">
-                                            <input type="hidden" name="_token"
-                                                value="JfYCcMGyl6mvFyH38eQllRZtSf7rf1mxFMYkAXKW" autocomplete="off">
+                                            <input type="hidden" name="_token" autocomplete="off">
                                             <input type="hidden" name="identifier" value="razorpay">
 
                                             <div class="fpb-7 mb-3">
@@ -2996,14 +2986,12 @@
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
-                                                    class="form-control ol-form-control"
-                                                    value="rzp_test_J60bqBOi1z1aF5" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
-                                                    class="form-control ol-form-control"
-                                                    value="uk935K7p4j96UCJgHK8kAU4q" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
 
                                             <div class="row">
@@ -3022,8 +3010,7 @@
                                     <div class="ol-card-body">
                                         <form action="#/admin/payment_settings/update" method="post"
                                             enctype="multipart/form-data">
-                                            <input type="hidden" name="_token"
-                                                value="JfYCcMGyl6mvFyH38eQllRZtSf7rf1mxFMYkAXKW" autocomplete="off">
+                                            <input type="hidden" name="_token" autocomplete="off">
                                             <input type="hidden" name="identifier" value="flutterwave">
 
                                             <div class="fpb-7 mb-3">
@@ -3070,16 +3057,12 @@
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
-                                                    class="form-control ol-form-control"
-                                                    value="FLWPUBK_TEST-48dfbeb50344ecd8bc075b4ffe9ba266-X"
-                                                    required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
-                                                    class="form-control ol-form-control"
-                                                    value="FLWSECK_TEST-1691582e23bd6ee4fb04213ec0b862dd-X"
-                                                    required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
 
                                             <div class="row">
@@ -3098,15 +3081,13 @@
                                     <div class="ol-card-body">
                                         <form action="#/admin/payment_settings/update" method="post"
                                             enctype="multipart/form-data">
-                                            <input type="hidden" name="_token"
-                                                value="JfYCcMGyl6mvFyH38eQllRZtSf7rf1mxFMYkAXKW" autocomplete="off">
+                                            <input type="hidden" name="_token" autocomplete="off">
                                             <input type="hidden" name="identifier" value="paytm">
 
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
-                                                    class="form-control ol-form-control"
-                                                    value="ApLWOX88722132489587" required="">
+                                                    class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
                                                 <label class="mb-2 text-capitalize">secret key</label>
