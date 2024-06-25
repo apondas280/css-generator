@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ColorSet;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Schema;
@@ -14,29 +15,26 @@ class ColorSetController extends Controller
 {
     public function index()
     {
-        return view('editor.index');
-    }
-
-    public function edit()
-    {
         $variables = ColorSet::get();
         $codes     = [];
         foreach ($variables as $variable) {
             $codes[] = $variable->variable . ':' . $variable->main . ';';
         }
         $page_data['codes'] = $codes;
-        return view('editor.edit', $page_data);
+        return view('editor.index', $page_data);
+    }
+
+    public function edit()
+    {
+        return view('editor.edit');
     }
 
     public function store(Request $request)
     {
         $column = Str::slug($request->palette);
-        if (! Schema::hasColumn('color_sets', $column)) {
-            Schema::table('color_sets', function (Blueprint $table) use ($column) {
-                $table->string($column)->nullable();
-            });
-        }
-        return redirect()->route('color.set.index');
+        DB::statement("ALTER TABLE color_sets ADD COLUMN $column VARCHAR(255)");
+        DB::statement("UPDATE color_sets SET $column = main");
+        return redirect()->route('palette');
     }
 
     public function variable_update(Request $request)
@@ -55,8 +53,7 @@ class ColorSetController extends Controller
                 ColorSet::where('variable', $code[0])->update(['main' => $code[1]]);
             }
         }
-
-        return redirect()->route('color.set.index');
+        return redirect()->route('palette');
     }
     public function update(Request $request)
     {
@@ -65,21 +62,33 @@ class ColorSetController extends Controller
         foreach ($colors as $key => $color) {
             ColorSet::where('variable', $key)->update([$request->mode => $color]);
         }
+        self::generate($request->mode);
         return redirect()->back();
     }
 
-    public function generate()
+    public static function generate($palette)
     {
         $variables = ColorSet::get();
-        $codes     = [];
+        $codes     = ".{$palette}:root{\n";
         foreach ($variables as $variable) {
-            $codes[] = $variable->variable . ':' . $variable->main . ';';
+            $codes .= "{$variable->variable}:{$variable->$palette};\n";
         }
+        $codes .= '}';
 
-        $filename = 'palette-' . time() . '.css';
-        $path     = storage_path('app/public/' . $filename);
+        $css_dir = public_path('assets/css/variables');
+        if (! File::isDirectory($css_dir)) {
+            File::makeDirectory($css_dir, 0777, true);
+        }
+        $css_file = "$css_dir/$palette.css";
+        File::put($css_file, $codes);
 
-        File::put($path, implode('', $codes));
-        return Response::download($path, $filename)->deleteFileAfterSend(true);
+        $blade_file = resource_path('views/layouts/generated_css.blade.php');
+        if (! File::exists($blade_file)) {
+            File::put($blade_file, '');
+        }
+        $cssLink = "<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('assets/css/variables/$palette.css') }}\">\n";
+        if (File::exists($blade_file) && ! strpos(File::get($blade_file), $cssLink)) {
+            File::append($blade_file, $cssLink);
+        }
     }
 }

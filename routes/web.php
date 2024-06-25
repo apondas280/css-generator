@@ -1,22 +1,24 @@
 <?php
 
 use App\Http\Controllers\ColorSetController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::controller(ColorSetController::class)->group(function () {
-    Route::get('color-set', 'index')->name('color.set.index');
-    Route::get('color-set/create', 'create')->name('color.set.create');
-    Route::get('color-set/edit', 'edit')->name('color.set.edit');
-    Route::post('color-set/store', 'store')->name('color.set.store');
-    Route::post('color-set/update', 'update')->name('color.set.update');
+Route::get('template', function () {
+    return view('guest.index');
+})->name('guest');
 
-    Route::post('variable/update', 'variable_update')->name('variable.update');
-    Route::get('generate/css', 'generate')->name('generate');
+Route::controller(ColorSetController::class)->group(function () {
+    Route::get('palette', 'index')->name('palette');
+    Route::get('palette/create', 'create')->name('palette.create');
+    Route::get('palette/edit', 'edit')->name('palette.edit');
+    Route::post('palette/store', 'store')->name('palette.store');
+    Route::post('palette/update', 'update')->name('palette.update');
+
+    Route::post('palette/variable/update', 'variable_update')->name('palette.variable.update');
 });
 
 require __DIR__ . '/auth.php';
