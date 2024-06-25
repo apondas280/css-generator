@@ -11,7 +11,6 @@
     <meta content="" name="description" />
     <meta content="" name="author" />
     <link rel="shortcut icon" href="{{ asset('assets/upload/favicon/favicon-1716465915.png') }}" />
-    <meta content="UQzRLXQ0TGBRQpRQXL94kNkAK4juUyIyQ4hYVMsN" name="csrf_token" />
     <!-- End meta -->
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css') }}" />
