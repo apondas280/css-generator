@@ -32,8 +32,13 @@ class ColorSetController extends Controller
     public function store(Request $request)
     {
         $column = Str::slug($request->palette);
-        DB::statement("ALTER TABLE color_sets ADD COLUMN $column VARCHAR(255)");
-        DB::statement("UPDATE color_sets SET $column = main");
+
+        if (! Schema::hasColumn('color_sets', $column)) {
+            Schema::table('color_sets', function (Blueprint $table) use ($column) {
+                $table->longText($column)->nullable();
+            });
+        }
+
         return redirect()->route('palette');
     }
 

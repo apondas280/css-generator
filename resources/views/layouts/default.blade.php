@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
 
 <head>
 
@@ -341,6 +341,29 @@
                             </div>
                         </a>
                     </li>
+
+                    <div class="color-palettes d-flex gap-2 align-items-center" style="width: 100%; flex-wrap: wrap;">
+                        @php
+                            $columns = Schema::getColumnListing('color_sets') ?? [];
+                            $columns = array_slice($columns, 2);
+                        @endphp
+
+                        @foreach ($columns as $column)
+                            <div class="bg-primary text-white px-3 py-2 rounded-pill text-capitalize cursor-pointer"
+                                id="{{ $column }}" onclick="toggleColor(this)">{{ $column }}</div>
+                        @endforeach
+                    </div>
+
+                    <script>
+                        function toggleColor(elem) {
+                            const palette = elem.getAttribute('id');
+                            const htmlElement = document.querySelector('html');
+                            htmlElement.className = '';
+                            htmlElement.classList.add(palette);
+
+                            $
+                        }
+                    </script>
                 </ul>
             </nav>
         </div>
@@ -533,21 +556,6 @@
                     </div>
                 </div>
 
-                <div class="color-palettes d-flex gap-3">
-                    <div class="palette rounded-pill" id="dark" onclick="toggleColor(this)"
-                        style="width: 50px; height: 50px; background: #19191c;"></div>
-                    <div class="palette rounded-pill" id="light" onclick="toggleColor(this)"
-                        style="width: 50px; height: 50px; background: #8aa2bd;"></div>
-                </div>
-
-                <script>
-                    function toggleColor(elem) {
-                        const palette = elem.getAttribute('id');
-                        const htmlElement = document.querySelector('html');
-                        htmlElement.className = '';
-                        htmlElement.classList.add(palette);
-                    }
-                </script>
 
                 <div class="row g-2 g-sm-3 my-3 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                     <div class="col">
@@ -723,7 +731,8 @@
                 <div class="row g-4 all-category-list">
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="ol-card category-card radious-10px h-100">
-                            <img src="assets/images/products/product-1.svg" class="card-img-top" alt="...">
+                            <img src="{{ asset('assets/images/products/product-1.svg') }}" class="card-img-top"
+                                alt="...">
                             <h6 class="title fs-14px mb-12px px-3 pt-3 d-flex align-baseline">
                                 <i class="me-1 far fa-object-ungroup"></i>
                                 Web Development <span class="d-inline-block ms-auto">(4)</span>
@@ -795,7 +804,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="ol-card category-card radious-10px h-100">
-                            <img src="assets/images/products/product-2.svg" class="card-img-top" alt="...">
+                            <img src="{{ asset('assets/images/products/product-2.svg') }}" class="card-img-top"
+                                alt="...">
                             <h6 class="title fs-14px mb-12px px-3 pt-3 d-flex align-baseline">
                                 <i class="me-1 fas fa-pencil-alt"></i>
                                 Graphic Design <span class="d-inline-block ms-auto">(5)</span>
@@ -850,7 +860,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="ol-card category-card radious-10px h-100">
-                            <img src="assets/images/products/product-3.svg" class="card-img-top" alt="...">
+                            <img src="{{ asset('assets/images/products/product-3.svg') }}" class="card-img-top"
+                                alt="...">
                             <h6 class="title fs-14px mb-12px px-3 pt-3 d-flex align-baseline">
                                 <i class="me-1 fas fa-male"></i>
                                 User Experience <span class="d-inline-block ms-auto">(6)</span>
@@ -890,7 +901,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="ol-card category-card radious-10px h-100">
-                            <img src="assets/images/products/product-1.svg" class="card-img-top" alt="...">
+                            <img src="{{ asset('assets/images/products/product-1.svg') }}" class="card-img-top"
+                                alt="...">
                             <h6 class="title fs-14px mb-12px px-3 pt-3 d-flex align-baseline">
                                 <i class="me-1 fab fa-yandex-international"></i>
                                 Interior Design <span class="d-inline-block ms-auto">(5)</span>
@@ -946,7 +958,8 @@
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="ol-card category-card radious-10px h-100">
-                            <img src="assets/images/products/product-1.svg" class="card-img-top" alt="...">
+                            <img src="{{ asset('assets/images/products/product-1.svg') }}" class="card-img-top"
+                                alt="...">
                             <h6 class="title fs-14px mb-12px px-3 pt-3 d-flex align-baseline">
                                 <i class="me-1 fas fa-cube"></i>
                                 3D and Animation <span class="d-inline-block ms-auto">(6)</span>
@@ -2790,7 +2803,7 @@
                                             <input type="hidden" name="identifier" value="paypal">
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Active</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Active</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="0">No</option>
@@ -2799,7 +2812,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Want to keep test mode
+                                                <label class="ol-form-label mb-2 text-capitalize">Want to keep test
+                                                    mode
                                                     enabled?</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
@@ -2809,7 +2823,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Select currency</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Select
+                                                    currency</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="">Select currency</option>
@@ -2824,23 +2839,26 @@
 
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">sandbox client id</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">sandbox client
+                                                    id</label>
                                                 <input type="text" name="sandbox_client_id"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">sandbox secret key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">sandbox secret
+                                                    key</label>
                                                 <input type="text" name="sandbox_secret_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">production client id</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">production client
+                                                    id</label>
                                                 <input type="text" name="production_client_id"
                                                     class="form-control ol-form-control" value="1234"
                                                     required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">production secret
+                                                <label class="ol-form-label mb-2 text-capitalize">production secret
                                                     key</label>
                                                 <input type="text" name="production_secret_key"
                                                     class="form-control ol-form-control" value="12345"
@@ -2867,7 +2885,7 @@
                                             <input type="hidden" name="identifier" value="stripe">
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Active</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Active</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="0">No</option>
@@ -2877,7 +2895,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Want to keep test mode
+                                                <label class="ol-form-label mb-2 text-capitalize">Want to keep test
+                                                    mode
                                                     enabled?</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
@@ -2887,7 +2906,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Select currency</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Select
+                                                    currency</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="">Select currency</option>
@@ -2901,22 +2921,24 @@
 
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">public key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">secret key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">public live key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">public live
+                                                    key</label>
                                                 <input type="text" name="public_live_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">secret live key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">secret live
+                                                    key</label>
                                                 <input type="text" name="secret_live_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
@@ -2941,7 +2963,7 @@
                                             <input type="hidden" name="identifier" value="razorpay">
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Active</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Active</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="0">
@@ -2953,7 +2975,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Want to keep test mode
+                                                <label class="ol-form-label mb-2 text-capitalize">Want to keep test
+                                                    mode
                                                     enabled?</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
@@ -2966,7 +2989,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Select currency</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Select
+                                                    currency</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="">Select currency</option>
@@ -2984,12 +3008,12 @@
 
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">public key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">secret key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
@@ -3014,7 +3038,7 @@
                                             <input type="hidden" name="identifier" value="flutterwave">
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Active</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Active</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="0">
@@ -3026,7 +3050,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Want to keep test mode
+                                                <label class="ol-form-label mb-2 text-capitalize">Want to keep test
+                                                    mode
                                                     enabled?</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
@@ -3039,7 +3064,8 @@
                                             </div>
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">Select currency</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">Select
+                                                    currency</label>
                                                 <select
                                                     class="form-control ol-form-control ol-select2 select2-hidden-accessible">
                                                     <option value="">Select currency</option>
@@ -3055,12 +3081,12 @@
 
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">public key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">secret key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
@@ -3085,12 +3111,12 @@
                                             <input type="hidden" name="identifier" value="paytm">
 
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">public key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">public key</label>
                                                 <input type="text" name="public_key"
                                                     class="form-control ol-form-control" required="">
                                             </div>
                                             <div class="fpb-7 mb-3">
-                                                <label class="mb-2 text-capitalize">secret key</label>
+                                                <label class="ol-form-label mb-2 text-capitalize">secret key</label>
                                                 <input type="text" name="secret_key"
                                                     class="form-control ol-form-control"
                                                     value="#iFa7&amp;W_C50VL@aT" required="">

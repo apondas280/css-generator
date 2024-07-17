@@ -81,10 +81,11 @@
     box-sizing: border-box;
 }
 
+
 :root {
-    --primary-normal: #1B84FF;
+    /*--active-color: #1B84FF;
     --primary-dark: #005fcf;
-    --primary-light: #e9f3ff;
+    --primary-light: #e9f3ff;*/
 
     --success-normal: #17c669;
     --success-dark: #10be61;
@@ -97,32 +98,32 @@
     --danger-normal: #f8285a;
     --danger-light: #fee4ea;
 
-    --light-normal: #f4f7fe;
-    --light-dark: #e0e5f3;
+    /*--light-normal: #f4f7fe;
+    --light-dark: #e0e5f3;*/
 
-    --blackColor: #000;
-    --darkColor: #0a1017;
+    /*--blackColor: #000;
+    --text-color: #0a1017;*/
 
-    --gray-dark: #3b3c40;
+    /*--text-color: #3b3c40;
     --gray-normal: #717785;
     --gray-light: #99A1B7;
     --gray-light-1: #C3C9DA;
-    --gray-light-2: #f2f3f5;
+    --gray-light-2: #f2f3f5;*/
 
 
-    --borderColor: #c3c9da;
+    /*--border-color: #c3c9da;
     --body-bg-color: #f8f9ff;
-    --whiteColor: #FFF;
+    --white-color: #FFF;
     --box-shadow-color: rgba(0, 0, 0, 0.10);
     --box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
-    --box-hover-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.136);
+    --box-hover-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.136);*/
 }
 
 body{
     padding: 0;
     margin: 0;
-    background: var(--body-bg-clr);
-    color: var(--txt-body-clr);
+    background: var(--background-color);
+    color: var(--text-color);
     font-family: 'Inter';
     font-size: 14px;
     font-style: normal;
@@ -359,43 +360,43 @@ span[class="fi-rr-"]:before {
 
 /* Border */
 .ol-border-top{
-    border-top: 1px solid var(--border-clr);
+    border-top: 1px solid var(--border-color);
 }
 .ol-border-left{
-    border-left: 1px solid var(--border-clr);
+    border-left: 1px solid var(--border-color);
 }
 .ol-border-right{
-    border-right: 1px solid var(--border-clr);
+    border-right: 1px solid var(--border-color);
 }
 .ol-border-bottom{
-    border-bottom: 1px solid var(--border-clr);
+    border-bottom: 1px solid var(--border-color);
 }
 .ol-border-bottom-2{
-    border-bottom: 1px solid var(--border-clr);
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* Title */
 .title {
     font-weight: 600;
-    color: var(--txt-clr);
+    color: var(--text-highlight-color);
 }
 .title2 {
     font-weight: 500;
-    color: var(--txt-clr);
+    color: var(--text-highlight-color);
 }
 .sub-title {
     font-weight: 500;
-    color: var(--txt-body-clr);
+    color: var(--text-color);
 }
 .sub-title2 {
     font-weight: 400;
-    color: var(--txt-body-clr);
+    color: var(--text-color);
 }
 
 /* card */
 .ol-card{
     border-radius: 12px;
-    background: var(--card-bg-clr);
+    background: var(--card-background-color);
 }
 .card-hover{
     transition: .3s;
@@ -409,16 +410,16 @@ span[class="fi-rr-"]:before {
 }
 .ol-borderd-card:hover .card-title-hover,
 .ol-card:hover .card-title-hover{
-    color: var(--txt-active-clr);
+    color: var(--active-color);
 }
 /* bordered card */
 .ol-borderd-card{
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     transition: .3s;
 }
 .borderd-card-hover:hover{
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
     cursor: pointer;
 }
 .card-icon-hover path{
@@ -426,14 +427,14 @@ span[class="fi-rr-"]:before {
 }
 .ol-card:hover .card-icon-hover path,
 .ol-borderd-card:hover .card-icon-hover path{
-    stroke: var(--primary-normal);
+    stroke: var(--active-color);
 }
 
 
 /* Alert */
 .ol-alert-primary{
     width: 100%;
-    border: 1px solid var(--primary-normal);
+    border: 1px solid var(--active-color);
     border-radius: 12px;
     background: var(--primary-light);
     margin-bottom: 0;
@@ -456,11 +457,11 @@ span[class="fi-rr-"]:before {
 .ol-btn-primary{
     border-radius: 8px;
     padding: 10.5px 24px;
-    background: var(--btn-primary-bg-clr);
+    background: var(--active-color);
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.01em;
-    color: var(--btn-primary-txt-clr);
+    color: var(--white-color);
     transition: .3s;
     border: none;
     text-align: center;
@@ -468,19 +469,19 @@ span[class="fi-rr-"]:before {
 }
 .ol-btn-primary:active,
 .ol-btn-primary:hover{
-    color: var(--btn-primary-txt-hover-clr) !important;
-    background-color: var(--btn-primary-bg-hover-clr) !important;
+    color: var(--active-color) !important;
+    background-color: var(--btn-hover-color) !important;
 }
 
 /* Light button  */
 .ol-btn-light{
     border-radius: 8px;
     padding: 10.5px 24px;
-    background: var(--btn-light-bg-clr);
+    background: var(--hover-background-color);
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.01em;
-    color: var(--btn-light-txt-clr);
+    color: var(--active-color);
     transition: .3s;
     border: none;
     text-align: center;
@@ -488,35 +489,35 @@ span[class="fi-rr-"]:before {
 }
 .ol-btn-light:active,
 .ol-btn-light:hover{
-    background: var(--btn-light-bg-hover-clr) !important;
-    color: var(--btn-light-txt-hover-clr) !important;
+    background: var(--active-color) !important;
+    color: var(--white-color) !important;
 }
 
 .ol-btn-outline-secondary{
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 9.5px 23px;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.01em;
-    color: var(--darkColor);
+    color: var(--text-highlight-color);
     transition: .3s;
     width: max-content;
 }
 .ol-btn-outline-secondary:active,
 .ol-btn-outline-secondary:hover{
-    border-color: var(--primary-normal) !important;
-    color: var(--primary-normal) !important;
+    border-color: var(--active-color) !important;
+    color: var(--active-color) !important;
 }
 
 .btn-outline-gray-small{
-    border: 1px solid var(--light-dark);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 7px 9px;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
-    color: var(--gray-normal);
+    color: var(--text-color);
     transition: .3s;
     position: relative;
     z-index: 1;
@@ -524,8 +525,8 @@ span[class="fi-rr-"]:before {
 }
 .btn-outline-gray-small:active,
 .btn-outline-gray-small:hover{
-    border: 1px solid var(--primary-normal) !important;
-    color: var(--primary-normal) !important;
+    border: 1px solid var(--active-color) !important;
+    color: var(--active-color) !important;
 }
 
 .ol-btn-light-primary{
@@ -535,14 +536,14 @@ span[class="fi-rr-"]:before {
     background: var(--gray-light);
     font-weight: 500;
     font-size: 16px;
-    color: var(--primary-normal);
+    color: var(--active-color);
     transition: .3s;
     width: max-content;
 }
 .ol-btn-light-primary:active,
 .ol-btn-light-primary:hover{
-    color: var(--whiteColor) !important;
-    background-color: var(--primary-normal) !important;
+    color: var(--white-color) !important;
+    background-color: var(--active-color) !important;
 }
 
 /* Small button  */
@@ -610,7 +611,7 @@ span[class="fi-rr-"]:before {
     width: 262px;
     z-index: 100;
     transition: all 0.5s ease;
-    background: var(--nav-card-bg);
+    background: var(--card-background-color);
 }
 .sidebar-logo-area {
     display: flex;
@@ -630,7 +631,7 @@ span[class="fi-rr-"]:before {
     color: var(--gray-light);
 }
 .sidebar-cross:hover ::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .menu-toggler{
     background: transparent;
@@ -650,7 +651,7 @@ span[class="fi-rr-"]:before {
     height: 0
 }
 .sidebar-title{
-    color: var(--txt-clr);
+    color: var(--text-highlight-color);
     font-weight: 600;
 }
 .sidebar-first-li:not(:last-child){
@@ -666,7 +667,7 @@ span[class="fi-rr-"]:before {
     display: flex;
     align-items: flex-start;
     column-gap: 16px;
-    color: var(--nav-link-clr);
+    color: var(--text-color);
     font-weight: 600;
     font-size: 14px;
 }
@@ -680,21 +681,21 @@ span[class="fi-rr-"]:before {
 }
 .sidebar-first-li.active > a path,
 .sidebar-first-li:hover > a path{
-    fill: var(--whiteColor);
+    fill: var(--active-color);
 }
 /* remove */
 
 .sidebar-first-li.active > a{
-    background: var(--primary-normal);
-    color: var(--whiteColor);
+    background: var(--hover-background-color);
+    color: var(--active-color);
 }
 .sidebar-first-li:hover > a{
-    background: var(--primary-normal);
-    color: var(--whiteColor);
+    background: var(--hover-background-color);
+    color: var(--active-color);
 }
 .sidebar-first-li > a .icon{
     font-size: 20px;
-    color: var(--nav-link-icon-clr);
+    color: var(--icon-color);
     transition: .3s;
 }
 .sidebar-first-li > a .icon::before{
@@ -702,18 +703,18 @@ span[class="fi-rr-"]:before {
 }
 .sidebar-first-li.active > a .icon,
 .sidebar-first-li:hover > a .icon{
-    color: var(--whiteColor);
+    color: var(--active-color);
 }
 
 .sidebar-first-li.active>a,
 .sidebar-first-li:hover>a {
-    background: var(--nav-link-hover-bg);
-    color: var(--nav-link-hover-clr);
+    background: var(--hover-background-color);
+    color: var(--active-color);
 }
 
 .sidebar-first-li.active>a .icon,
 .sidebar-first-li:hover>a .icon {
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 /* First Submenu */
 
@@ -776,7 +777,7 @@ span[class="fi-rr-"]:before {
     position: relative;
     font-weight: 600;
     font-size: 14px;
-    color: var(--nav-link-clr);
+    color: var(--text-color);
     width: 100%;
     transition: .3s;
 }
@@ -788,20 +789,20 @@ span[class="fi-rr-"]:before {
     height: 4px;
     width: 4px;
     border-radius: 50%;
-    background: var(--gray-light);
+    background: var(--text-color);
     transition: .3s;
 }
 .sidebar-second-li.active > a,
 .sidebar-second-li:hover > a{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .sidebar-second-li.active > a::after,
 .sidebar-second-li:hover > a::after{
-    background: var(--primary-normal);
+    background: var(--active-color);
 }
 .first-sub-menu-title{
     display: none;
-    color: var(--darkColor);
+    color: var(--text-color);
     font-weight: 600;
 }
 /* Second Sub Menu */
@@ -817,13 +818,13 @@ span[class="fi-rr-"]:before {
     position: relative;
     font-weight: 500;
     font-size: 14px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     width: 100%;
     transition: .3s;
 }
 .sidebar-third-li.active > a,
 .sidebar-third-li:hover > a{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .sidebar-third-li > a::after {
     position: absolute;
@@ -838,7 +839,7 @@ span[class="fi-rr-"]:before {
 }
 .sidebar-third-li.active > a::after,
 .sidebar-third-li:hover > a::after{
-    background: var(--primary-normal);
+    background: var(--active-color);
 }
 .second-li-have-sub > a::before {
     content: "";
@@ -916,7 +917,7 @@ span[class="fi-rr-"]:before {
     }
     .ol-sidebar.hide .first-li-have-sub.active:hover > a path,
     .ol-sidebar.hide .first-li-have-sub:hover > a path{
-        fill: var(--whiteColor);
+        fill: var(--white-color);
     }
     /* remove */
     .ol-sidebar.hide .first-li-have-sub.active > a .icon,
@@ -925,11 +926,11 @@ span[class="fi-rr-"]:before {
     }
     .ol-sidebar.hide .first-li-have-sub.active:hover > a .icon,
     .ol-sidebar.hide .first-li-have-sub:hover > a .icon{
-        color: var(--whiteColor);
+        color: var(--white-color);
     }
     .ol-sidebar.hide .first-li-have-sub.active:hover > a,
     .ol-sidebar.hide .first-li-have-sub:hover > a{
-        background: var(--primary-normal);
+        background: var(--active-color);
     }
     .ol-sidebar.hide .first-li-have-sub{
         position: relative;
@@ -947,8 +948,8 @@ span[class="fi-rr-"]:before {
         top: 5px;
         border-radius: 12px;
         padding: 16px;
-        box-shadow: 0 4px 12px 0 var(--box-hover-shadow);
-        background: var(--whiteColor);
+        box-shadow: 0 4px 12px 0 var(--shadow);
+        background: var(--card-background-color);
     }
     .ol-sidebar.hide .first-li-have-sub:hover .first-sub-menu {
         visibility: visible;
@@ -993,14 +994,14 @@ span[class="fi-rr-"]:before {
 .sidebar-plus span::before{
     display: block;
     transition: .3s;
-    color: var(--gray-light);
+    color: var(--text-highlight-color);
 }
 .sidebar-plus:hover span::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 .page-title{
-    color: var(--txt-clr);
+    color: var(--text-highlight-color);
     font-weight: 600;
 }
 
@@ -1038,7 +1039,7 @@ span[class="fi-rr-"]:before {
     transition: width 400ms ease, background 400ms ease;
     width: 0px;
     cursor: pointer;
-    color: var(--gray-dark);
+    color: var(--text-color);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1050,12 +1051,12 @@ span[class="fi-rr-"]:before {
     background-position: calc(100% - 10px) 8px;
     padding: 7px  28px 7px 17px;
     background-color: var(--gray-light-2);
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
     cursor: text;
     outline: 0;
     max-width: 280px;
     width: 100%;
-    color: var(--gray-dark);
+    color: var(--text-color);
     opacity: 1;
 }
 .header-desktop-search .form-control::placeholder{
@@ -1099,20 +1100,20 @@ span[class="fi-rr-"]:before {
     width: 100%;
     padding: 8px  83px 8px 10px;
     border-radius: 8px;
-    border: 1px solid var(--borderColor);
-    color: var(--gray-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    background: var(--whiteColor);
+    background: var(--white-color);
 }
 .mobile-search-inner .form-control:focus{
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .mobile-search-inner .form-control:hover,
 .mobile-search-inner .form-control:focus{
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 .mobile-search-inner .btn-search{
     position: absolute;
@@ -1120,8 +1121,8 @@ span[class="fi-rr-"]:before {
     top: 50%;
     transform: translateY(-50%);
     border-radius: 0 8px 8px 0;
-    background: var(--primary-normal);
-    color: var(--whiteColor);
+    background: var(--active-color);
+    color: var(--white-color);
     padding: 9px 18px;
     font-size: 14px;
     font-style: normal;
@@ -1131,7 +1132,7 @@ span[class="fi-rr-"]:before {
 }
 .mobile-search-inner .btn-search:active,
 .mobile-search-inner .btn-search:hover {
-    color: var(--whiteColor) !important;
+    color: var(--white-color) !important;
     background-color: var(--primary-dark) !important;
 }
 
@@ -1145,7 +1146,7 @@ span[class="fi-rr-"]:before {
     align-items: center;
     column-gap: 8px;
     cursor: pointer;
-    color: var(--darkColor);
+    color: var(--text-color);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -1189,13 +1190,13 @@ span[class="fi-rr-"]:before {
     position: absolute;
     top: calc(100% + 10px);
     right: 0;
-    background-color: var(--whiteColor);
+    background-color: var(--card-background-color);
     border-radius: 5px;
     visibility: hidden;
     opacity: 0;
     transition: .3s;
     z-index: 3;
-    box-shadow: 0px 4px 40px 0px var(--box-shadow-color);
+    box-shadow: 0px 4px 40px 0px var(--shadow);
     padding: 8px;
 }
 .img-text-select .drop-content.active{
@@ -1209,8 +1210,8 @@ span[class="fi-rr-"]:before {
     border-radius: 4px;
 }
 .img-text-select .drop-content ul li:hover {
-    background-color: var(--primary-light);
-    color: var(--primary-normal);
+    background-color: var(--hover-background-color);
+    color: var(--active-color);
 }
 
 /* Notification */
@@ -1228,7 +1229,7 @@ span[class="fi-rr-"]:before {
 }
 .header-dropdown-toggle-lg span::before{
     display: block;
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .header-dropdown-toggle-lg.have-notice:after{
     content: "";
@@ -1239,7 +1240,7 @@ span[class="fi-rr-"]:before {
     min-width: 4.17px;
     width: 4.17px;
     border-radius: 50%;
-    background: var(--primary-normal);
+    background: var(--active-color);
 }
 .header-dropdown-lg{
     position: relative;
@@ -1265,7 +1266,7 @@ span[class="fi-rr-"]:before {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 10px 20px 0 var(--box-hover-shadow);
-    background: var(--whiteColor);
+    background: var(--white-color);
 }
 .dropdown-lg-title-header{
     column-gap: 20px;
@@ -1275,7 +1276,7 @@ span[class="fi-rr-"]:before {
     transition: .3s;
 }
 .link-text:hover{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 .dropdown-lg-list li:not(:last-child){
@@ -1351,10 +1352,10 @@ span[class="fi-rr-"]:before {
     display: none;
 }
 span[data-bs-original-title="AI Assistant"] path {
-    fill:var(--icon-clr)
+    fill:var(--icon-color)
 }
 .fi-rr-language{
-    color:var(--icon-clr)
+    color:var(--icon-color)
 }
 .user-profile-sm{
     height: 30px;
@@ -1371,8 +1372,8 @@ span[data-bs-original-title="AI Assistant"] path {
     top: calc(100% + 8px);
     right: 0;
     border: none;
-    box-shadow: 0 4px 40px 0 var(--box-shadow-color);
-    background: var(--dropdown-bg-clr);
+    box-shadow: 0 4px 40px 0 var(--shadow);
+    background: var(--card-background-color);
     border-radius: 8px;
     min-width: 229px;
     z-index: 3;
@@ -1395,12 +1396,12 @@ span[data-bs-original-title="AI Assistant"] path {
     font-weight: 500;
     font-size: 12px;
     line-height: 12px;
-    color: var(--txt-body-clr);
+    color: var(--text-color);
     width: 100%;
     transition: .3s;
 }
 .dropdown-item-1:hover{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .dropdown-list-submenu{
     padding-top: 10px;
@@ -1447,7 +1448,7 @@ span[data-bs-original-title="AI Assistant"] path {
 .total-item-card{
     border-radius: 12px;
     padding: 10px 20px;
-    background: var(--whiteColor);
+    background: var(--white-color);
     cursor: pointer;
     transition: .3s;
 }
@@ -1458,7 +1459,7 @@ span[data-bs-original-title="AI Assistant"] path {
     box-shadow: 0 4px 12px 0 var(--box-hover-shadow);
 }
 .total-item-card:hover .title{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 
@@ -1489,7 +1490,7 @@ span[data-bs-original-title="AI Assistant"] path {
     background-image: url("../images/icons/arrow-up-red.svg");
 }
 .chart-percentage.green{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .chart-percentage.red{
     color: var(--danger-normal);
@@ -1506,13 +1507,13 @@ span[data-bs-original-title="AI Assistant"] path {
     text-align: left;
     min-width: 100px;
     width: 100%;
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--border-color);
 }
 .insights-nav-pills .nav-link.active,
 .insights-nav-pills .show>.nav-link {
     color: inherit;
     padding: 15px 8px 12px 8px;
-    border-bottom: 3px solid var(--primary-normal);
+    border-bottom: 3px solid var(--active-color);
     background: linear-gradient(180deg, var(--box-shadow-color) 0%, var(--box-shadow-color) 100%);
 }
 .area-chart-lg .apexcharts-text tspan{
@@ -1581,24 +1582,24 @@ span[data-bs-original-title="AI Assistant"] path {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 14px;
-    color: var(--txt-clr);
+    color: var(--text-highlight-color);
 }
 /* Input */
 .ol-form-control{
-    border: 1px solid var(--border-clr);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 10px 15px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    background-color: var(--input-bg-clr);
-    color: var(--input-txt-clr);
+    background-color: var(--border-color);
+    color: var(--border-color);
     transition: .3s;
 }
 .ol-form-control:hover,
 .ol-form-control:focus{
-    color: var(--txt-body-clr);
-    border-color: var(--border-active-clr);
+    color: var(--text-color);
+    border-color: var(--active-color);
     box-shadow: none;
 }
 /* Error  */
@@ -1610,13 +1611,13 @@ span[data-bs-original-title="AI Assistant"] path {
 }
 /* Textarea */
 .ol-form-textarea{
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 13px 15px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     transition: .3s;
 }
 textarea.ol-form-textarea{
@@ -1624,15 +1625,15 @@ textarea.ol-form-textarea{
 }
 .ol-form-textarea:hover,
 .ol-form-textarea:focus{
-    color: var(--gray-dark);
-    border-color: var(--primary-normal);
+    color: var(--text-color);
+    border-color: var(--active-color);
     box-shadow: none;
 }
 .ol-form-text{
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
-    color: var(--darkColor);
+    color: var(--text-color);
     margin-top: 10px;
 }
 
@@ -1644,20 +1645,20 @@ textarea.ol-form-textarea{
     height: auto;
 }
 .ol-select2 ~ .select2-container--default .select2-selection--single{
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 10px 35px 10px 15px;
     transition: .3s;
 }
 .ol-select2 ~ .select2-container--default .select2-selection--single:hover{
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 .ol-select2 ~ .select2-container .select2-selection--single .select2-selection__rendered{
     padding: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .ol-select2 ~ .select2-container--default .select2-selection--single .select2-selection__clear{
     display: none;
@@ -1687,7 +1688,7 @@ textarea.ol-form-textarea{
 
 .select-drop .select2-dropdown{
     border-radius: 8px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--input-background);
     padding: 4px;
 }
 .select-drop .select2-search--dropdown {
@@ -1715,11 +1716,11 @@ textarea.ol-form-textarea{
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .select-drop.select2-container--default .select2-search--dropdown .select2-search__field:focus{
     outline: none;
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 .select-drop.select2-container--default .select2-results__option{
     padding: 6px 8px;
@@ -1727,7 +1728,7 @@ textarea.ol-form-textarea{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .select-drop.select2-container--open .select2-dropdown--above {
     border-bottom-left-radius: 0;
@@ -1739,11 +1740,11 @@ textarea.ol-form-textarea{
 }
 .select-drop.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
     background: var(--primary-light);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .select-drop.select2-container--default .select2-results__option--selected {
-    background-color: var(--whiteColor);
-    color: var(--primary-normal);
+    background-color: var(--white-color);
+    color: var(--active-color);
 }
 .select-drop.select2-container--default .select2-results__option:not(:last-child){
     margin-bottom: 2px;
@@ -1762,8 +1763,8 @@ textarea.ol-form-textarea{
     box-shadow: none;
 }
 .form-check-input-checkbox:checked{
-    background-color: var(--primary-normal);
-    border-color: var(--primary-normal);
+    background-color: var(--active-color);
+    border-color: var(--active-color);
 }
 .form-check-input-checkbox[type=checkbox] {
     border-radius: 3px;
@@ -1772,7 +1773,7 @@ textarea.ol-form-textarea{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     cursor: pointer;
 }
 .form-check-checkbox {
@@ -1807,7 +1808,7 @@ textarea.ol-form-textarea{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--darkColor);
+    color: var(--text-color);
     cursor: pointer;
 }
 .form-check-radio .form-check-input-radio{
@@ -1831,31 +1832,37 @@ textarea.ol-form-textarea{
     display: none !important;
 }
 #oleditor ~ .tox-tinymce{
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 #oleditor ~ .tox-tinymce:hover{
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 /* File Input */
 .form-control-file[type=file]{
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .form-control-file[type=file]:focus{
     box-shadow: none;
 }
 .form-control-file[type=file]::file-selector-button {
-    padding: 10px 15px;
-    background: var(--gray-light);
+    background: transparent;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
+    transition: .3s;
+    border-radius: 6px;
+}
+
+.form-control-file[type=file]:hover::file-selector-button {
+    background: var(--hover-background-color) !important;
+    color: var(--active-color) !important;
 }
 
 /* Modal */
@@ -1868,12 +1875,12 @@ textarea.ol-form-textarea{
     border: none;
     border-radius: 12px;
     padding: 24px;
-    background: var(--whiteColor);
+    background: var(--white-color);
 }
 .ol-modal .modal-header {
     padding: 0;
     padding-bottom: 16px;
-    border-color: var(--borderColor);
+    border-color: var(--border-color);
 }
 .ol-modal .btn-close{
     height: 16px;
@@ -1894,9 +1901,9 @@ textarea.ol-form-textarea{
 /* Modal 1 */
 .ol-radiobox-1{
     padding: 16px 15px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    background: var(--whiteColor);
+    background: var(--white-color);
     cursor: pointer;
     row-gap: 5px;
     transition: .3s;
@@ -1908,13 +1915,13 @@ textarea.ol-form-textarea{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .ol-radiobox-1 .form-check-input-radio{
     margin: 0;
 }
 .ol-radiobox-1:has(.form-check-input-radio:checked[type="radio"]){
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 /* Modal 2 */
 .ol-radiobox-2{
@@ -1932,7 +1939,7 @@ textarea.ol-form-textarea{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     transition: .3s;
 }
 .ol-radiobox-2 .title-icon span::before{
@@ -1957,13 +1964,13 @@ textarea.ol-form-textarea{
     transition: .3s;
 }
 .ol-radiobox-2:has(.form-check-input:checked[type="radio"]) {
-    background: var(--primary-normal);
+    background: var(--active-color);
 }
 .ol-radiobox-2:has(.form-check-input:checked[type="radio"]) .title-icon .title{
-    color: var(--whiteColor);
+    color: var(--white-color);
 }
 .ol-radiobox-2:has(.form-check-input:checked[type="radio"]) .title-icon span::before{
-    color: var(--whiteColor);
+    color: var(--white-color);
 }
 .ol-radiobox-2:has(.form-check-input:checked[type="radio"]) .check{
     background-image: url("../images/icons/checked-circle-white-16.svg");
@@ -1985,7 +1992,7 @@ textarea.ol-form-textarea{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     transition: .3s;
 }
 .ol-radiobox-3 .title-icon span::before{
@@ -2010,13 +2017,13 @@ textarea.ol-form-textarea{
     transition: .3s;
 }
 .ol-radiobox-3:has(.form-check-input:checked[type="radio"]) {
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 .ol-radiobox-3:has(.form-check-input:checked[type="radio"]) .title-icon .title{
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .ol-radiobox-3:has(.form-check-input:checked[type="radio"]) .title-icon span::before{
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .ol-radiobox-3:has(.form-check-input:checked[type="radio"]) .check{
     background-image: url("../images/icons/checked-circle-green-16.svg");
@@ -2028,21 +2035,21 @@ textarea.ol-form-textarea{
     width: 100%;
     line-height: inherit;
     padding: 7px 37px 7px 11px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     font-family: 'Inter';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
     border-radius: 4px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     float: none;
 }
 .ol-small-niceSelect:hover,
 .ol-small-niceSelect:active,
 .ol-small-niceSelect.open,
 .ol-small-niceSelect:focus {
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 .ol-small-niceSelect:after{
     border: none;
@@ -2082,7 +2089,7 @@ textarea.ol-form-textarea{
 .ol-small-niceSelect .option.focus,
 .ol-small-niceSelect .option.selected.focus {
     background-color: var(--primary-light);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 /* Dot Dropdown */
@@ -2097,7 +2104,7 @@ textarea.ol-form-textarea{
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    color: var(--icon-clr);
+    color: var(--icon-color);
     border: none;
     display: flex;
     align-items: center;
@@ -2106,13 +2113,13 @@ textarea.ol-form-textarea{
 }
 .ol-icon-dropdown .dropdown-toggle:active,
 .ol-icon-dropdown .dropdown-toggle:hover{
-    background: var(--primary-light);
-    color: var(--primary-normal);
+    background: var(--hover-background-color);
+    color: var(--active-color);
 }
 .ol-icon-dropdown .dropdown-menu{
     border-radius: 8px;
-    background: var(--dropdown-bg-clr);
-    box-shadow: 0px 4px 40px 0px var(--box-shadow-color);
+    background: var(--card-background-color);
+    box-shadow: 0px 4px 40px 0px var(--shadow);
     padding: 4px;
     border: none;
     min-width: 133px;
@@ -2122,7 +2129,7 @@ textarea.ol-form-textarea{
 }
 .ol-icon-dropdown .dropdown-menu li a{
     border-radius: 4px;
-    color: var(--dropdown-txt-clr);
+    color: var(--text-color);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -2130,8 +2137,8 @@ textarea.ol-form-textarea{
     padding: 6px 8px;
 }
 .ol-icon-dropdown .dropdown-menu li a:hover{
-    background: var(--dropdown-txt-hover-bg-clr);
-    color: var(--dropdown-txt-hover-clr);
+    background: var(--hover-background-color);
+    color: var(--active-color);
 }
 .ol-icon-dropdown-transparent .dropdown-toggle{
     background: transparent;
@@ -2147,7 +2154,7 @@ textarea.ol-form-textarea{
 .ol-text-dropdown .dropdown-toggle{
     padding: 6px 12px;
     background: var(--gray-light-2);
-    color: var(--gray-dark);
+    color: var(--text-color);
     border: none;
     display: flex;
     align-items: center;
@@ -2157,11 +2164,11 @@ textarea.ol-form-textarea{
 .ol-text-dropdown .dropdown-toggle:active,
 .ol-text-dropdown .dropdown-toggle:hover{
     background: var(--primary-light);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .ol-text-dropdown .dropdown-menu{
     border-radius: 8px;
-    background: var(--whiteColor);
+    background: var(--white-color);
     box-shadow: 0px 4px 40px 0px var(--box-shadow-color);
     padding: 4px;
     border: none;
@@ -2172,7 +2179,7 @@ textarea.ol-form-textarea{
 }
 .ol-text-dropdown .dropdown-menu li a{
     border-radius: 4px;
-    color: var(--darkColor);
+    color: var(--text-color);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -2181,7 +2188,7 @@ textarea.ol-form-textarea{
 }
 .ol-text-dropdown .dropdown-menu li a:hover{
     background: var(--primary-light);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 .ol-text-dropdown-transparent .dropdown-toggle{
     background: transparent;
@@ -2208,27 +2215,27 @@ textarea.ol-form-textarea{
 
 /* Table */
 .table{
-    background: var(--card-bg-clr);
+    background: var(--card-background-color);
 }
 .table>:not(caption)>*>*{
-    background: var(--card-bg-clr);
-    color: var(--txt-clr);
-    border-color: var(--line-clr);
+    background: var(--card-background-color);
+    color: var(--text-color);
+    border-color: var(--line-color);
 }
 .table.ol-table tr{
-    border-color: var(--borderColor);
+    border-color: var(--border-color);
 }
 .table.ol-table thead th{
     padding: 10px 0 16px 0;
     font-weight: 600;
     font-size: 18px;
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .table.ol-table tbody td{
     padding: 16px 0;
     font-weight: 500;
     font-size: 16px;
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .table.ol-table th:last-child,
 .table.ol-table td:last-child{
@@ -2247,7 +2254,7 @@ textarea.ol-form-textarea{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .ol-dot-list > li::after{
     position: absolute;
@@ -2257,7 +2264,7 @@ textarea.ol-form-textarea{
     height: 4px;
     width: 4px;
     border-radius: 50%;
-    background: var(--gray-dark);
+    background: var(--text-color);
 }
 .ol-dot-list > li:not(:last-child){
     margin-bottom: 8px;
@@ -2271,7 +2278,7 @@ textarea.ol-form-textarea{
 .message-sidebar-area{
     width: 100%;
     border-radius: 12px;
-    background: var(--whiteColor);
+    background: var(--white-color);
     padding: 20px 5px 16px 14px;
 }
 .message-sidebar-header{
@@ -2292,7 +2299,7 @@ textarea.ol-form-textarea{
     font-weight: bold !important;
 }
 .message-sidebar-header .back-and-plus .back-title .back:hover ::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 
@@ -2310,12 +2317,12 @@ textarea.ol-form-textarea{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .message-sidebar-search .form-control:focus{
     box-shadow: none;
-    border-color: var(--primary-normal);
-    color: var(--gray-dark);
+    border-color: var(--active-color);
+    color: var(--text-color);
 }
 .message-sidebar-search .sideSearch-label{
     margin: 0;
@@ -2400,7 +2407,7 @@ textarea.ol-form-textarea{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: var(--darkColor);
+    color: var(--text-color);
     margin-bottom: 4px;
 }
 .message-sidebar-message .details .message{
@@ -2408,20 +2415,20 @@ textarea.ol-form-textarea{
     font-size: 14px;
     line-height: 20px;
     line-height: 1.42857;
-    color: var(--gray-dark);
+    color: var(--text-color);
     word-break: break-word;
 }
 .message-sidebar-message .details .time{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     min-width: max-content;
 }
 /* Messenger */
 .messenger-area{
     border-radius: 12px;
-    background: var(--whiteColor);
+    background: var(--white-color);
     max-width: 100%;
     width: 100%;
 }
@@ -2439,7 +2446,7 @@ textarea.ol-form-textarea{
     bottom: 0;
     height: 1px;
     width: calc(100% - 40px);
-    background: var(--borderColor);
+    background: var(--border-color);
 }
 .messenger-header .user-wrap {
     column-gap: 12px;
@@ -2459,14 +2466,14 @@ textarea.ol-form-textarea{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: var(--darkColor);
+    color: var(--text-color);
     margin-bottom: 2px;
 }
 .messenger-header .user-wrap .name-status .status{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     padding-left: 16px;
     position: relative;
 }
@@ -2500,10 +2507,10 @@ textarea.ol-form-textarea{
     transition: .3s;
     font-size: 22px;
     display: block;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .messenger-call-search .call:hover span::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 
@@ -2531,7 +2538,7 @@ textarea.ol-form-textarea{
     transition: width 400ms ease, background 400ms ease;
     width: 0px;
     cursor: pointer;
-    color: var(--gray-dark);
+    color: var(--text-color);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -2546,12 +2553,12 @@ textarea.ol-form-textarea{
 .messenger-search .form-control:focus {
     background-position: calc(100% - 5px) 5px;
     padding: 7px  28px 7px 10px;
-    background-color: var(--whiteColor);
-    border-color: var(--primary-normal);
+    background-color: var(--white-color);
+    border-color: var(--active-color);
     cursor: text;
     outline: 0;
     width: 230px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     opacity: 1;
 }
 .messenger-search .form-control::placeholder{
@@ -2565,7 +2572,7 @@ textarea.ol-form-textarea{
 /* Message */
 .messenger-body{
     padding: 20px 20px 60px 20px;
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--border-color);
     height: calc(100vh - 240px);
     overflow-y: auto;
 }
@@ -2638,13 +2645,13 @@ textarea.ol-form-textarea{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: var(--darkColor);
+    color: var(--text-color);
 }
 .single-message .user-wrap .name-time .time{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .single-message .message{
     max-width: 392px;
@@ -2655,7 +2662,7 @@ textarea.ol-form-textarea{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: var(--gray-dark);
+    color: var(--text-color);
     position: relative;
 }
 .single-message .message::after{
@@ -2678,8 +2685,8 @@ textarea.ol-form-textarea{
     align-items: flex-end;
 }
 .single-message.recipient-user .message{
-    background: var(--primary-normal);
-    color: var(--whiteColor);
+    background: var(--active-color);
+    color: var(--white-color);
 }
 .single-message.recipient-user .message::after{
     left: auto;
@@ -2702,26 +2709,26 @@ textarea.ol-form-textarea{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     transition: .3s;
     margin-right: 6px;
 }
 .form-control-message:hover{
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
 }
 .form-control-message:focus{
     box-shadow: none;
-    color: var(--gray-dark);
+    color: var(--text-color);
     background: var(--gray-light-2);
 }
 .voice-message span::before{
     transition: .3s;
     display: block;
     font-size: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .voice-message:hover span::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 .form-label-fileinput{
@@ -2732,10 +2739,10 @@ textarea.ol-form-textarea{
     transition: .3s;
     display: block;
     font-size: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .form-label-fileinput:hover span::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 /* Message Page Css End ***
 *************************/
@@ -2754,7 +2761,7 @@ textarea.ol-form-textarea{
   }
   .ol-sidebar-tab .nav-link{
     border-radius: 8px;
-    background: var(--whiteColor);
+    background: var(--card-background-color);
     padding: 10px 18px;
     transition: .3s;
     display: flex;
@@ -2763,37 +2770,37 @@ textarea.ol-form-textarea{
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
   }
   .ol-sidebar-tab .nav-link span::before{
     display: block;
     font-size: 18px;
-    color: var(--gray-light);
+    color: var(--icon-color);
     transition: .3s;
   }
   .ol-sidebar-tab .nav-link:hover{
-    background: var(--primary-normal);
-    color: var(--whiteColor);
+    background: var(--active-color);
+    color: var(--white-color);
   }
   .ol-sidebar-tab .nav-link.active{
-    color: var(--whiteColor);
-    background-color: var(--primary-normal);
+    color: var(--white-color);
+    background-color: var(--active-color);
   }
   .ol-sidebar-tab .nav-link:hover span::before,
   .ol-sidebar-tab .nav-link.active span::before,
   .ol-sidebar-tab .show > .nav-link span::before{
-    color: var(--whiteColor);
+    color: var(--white-color);
   }
 
   .ol-sidebar-tab .nav-pills .nav-link.active,
   .ol-sidebar-tab .nav-pills .show > .nav-link {
-    color: var(--whiteColor);
-    background-color: var(--primary-normal);
+    color: var(--white-color);
+    background-color: var(--active-color);
   }
   .ol-sidebar-tab .nav-pills .nav-link:hover span::before,
   .ol-sidebar-tab .nav-pills .nav-link.active span::before,
   .ol-sidebar-tab .nav-pills .show > .nav-link span::before{
-    color: var(--whiteColor);
+    color: var(--white-color);
   }
 
 
@@ -2804,7 +2811,7 @@ textarea.ol-form-textarea{
   }
   .single-accor-item{
     list-style: none;
-    border: 1px solid var(--light-dark);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
   }
   .accordion-btn-wrap{
@@ -2833,8 +2840,8 @@ textarea.ol-form-textarea{
     transform: translateY(-50%) rotate(-180deg);
   }
   .single-accor-item.active-accor .accordion-btn-wrap{
-    box-shadow: inset 0 calc(-1 * 1px) 0 var(--light-dark);
-    background: var(--light-normal);
+    box-shadow: inset 0 calc(-1 * 1px) 0 var(--shadow);
+    background: var(--line-color);
     border-radius: 8px 8px 0 0;
   }
 
@@ -2854,7 +2861,7 @@ textarea.ol-form-textarea{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--darkColor);
+    color: var(--text-highlight-color);
   }
   .accordion-button-buttons{
     padding-right: 16px;
@@ -2878,7 +2885,7 @@ textarea.ol-form-textarea{
     height: 30px;
     width: 30px;
     border-radius: 4px;
-    border: 1px solid var(--light-dark);
+    border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2887,16 +2894,16 @@ textarea.ol-form-textarea{
   .accordion-button-buttons .delete span::before,
   .accordion-button-buttons .edit span::before{
     display: block;
-    color: var(--gray-normal);
+    color: var(--text-color);
     transition: .3s;
   }
   .accordion-button-buttons .delete:hover span::before,
   .accordion-button-buttons .edit:hover span::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
   }
   .accordion-button-buttons .delete:hover,
   .accordion-button-buttons .edit:hover{
-    border-color: var(--primary-normal);
+    border-color: var(--active-color);
   }
 
   .accoritem-body{
@@ -2911,13 +2918,13 @@ textarea.ol-form-textarea{
     padding: 9px 0;
   }
   .list-group-3 li:not(:last-child){
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--border-color);
   }
   .list-group-3 li .title{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: var(--darkColor);
+    color: var(--text-color);
   }
   .list-group-3 li .buttons{
     display: flex;
@@ -2938,15 +2945,15 @@ textarea.ol-form-textarea{
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    background: var(--light-normal);
+    background: var(--hover-background-color);
   }
   .list-group-3 li .buttons .edit-delete span::before{
     display: block;
-    color: var(--gray-normal);
+    color: var(--icon-color);
     transition: .3s;
   }
   .list-group-3 li .buttons .edit-delete:hover span::before{
-    color: var(--primary-normal);
+    color: var(--active-color);
   }
 /* Curriculum Page Css End ***
 ****************************/
@@ -2973,7 +2980,7 @@ textarea.ol-form-textarea{
 }
 .ol-bt-progress .progress-bar{
     border-radius: 50px;
-    background-color: var(--primary-normal);
+    background-color: var(--active-color);
 }
 /* List */
 .textbox-secondary-sm{
@@ -2983,12 +2990,12 @@ textarea.ol-form-textarea{
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 .ol-list-group-1 > li:not(:last-child){
     padding-bottom: 16px;
     margin-bottom: 16px;
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--border-color);
 }
 /* btn */
 .btn-light-white{
@@ -2998,13 +3005,13 @@ textarea.ol-form-textarea{
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: var(--gray-dark);
+    color: var(--text-color);
     transition: .3s;
 }
 .btn-light-white.active,
 .btn-light-white:active,
 .btn-light-white:hover{
-    color: var(--darkColor) !important;
+    color: var(--text-color) !important;
     background: var(--gray-light-2) !important;
 }
 /* Curriculum Component Page Css End ***
@@ -3045,7 +3052,7 @@ textarea.ol-form-textarea{
 .custom-dropdown-btn {
     padding: 6px 12px;
     background: var(--gray-light-2);
-    color: var(--gray-dark);
+    color: var(--text-color);
     font-size: 16px;
     border-radius: 6px;
     border: none;
@@ -3060,7 +3067,7 @@ textarea.ol-form-textarea{
 
 .custom-dropdown-btn:hover{
     background: var(--primary-light);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 .custom-dropdown-menu{
@@ -3071,7 +3078,7 @@ textarea.ol-form-textarea{
     right: 0;
     width: 300px;
     padding: 4px;
-    background: var(--whiteColor);
+    background: var(--white-color);
     border-radius: 8px;
     box-shadow: 0px 4px 40px 0px var(--box-shadow-color);
     transition: .3s;
@@ -3082,7 +3089,7 @@ textarea.ol-form-textarea{
 }
 .custom-dropdown-item{
     border-radius: 4px;
-    color: var(--darkColor);
+    color: var(--text-color);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3100,7 +3107,7 @@ textarea.ol-form-textarea{
 }
 .custom-dropdown-item:hover{
     background: var(--primary-light);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 .table-responsive{
@@ -3108,11 +3115,11 @@ textarea.ol-form-textarea{
 }
 
 .edit-badge{
-    border: 1px solid var(--primary-normal);
-    background-color: var(--whiteColor);
+    border: 1px solid var(--active-color);
+    background-color: var(--white-color);
     border-radius: 5px;
     padding: 5px 10px;
-    color: var(--primary-normal) !important;
+    color: var(--active-color) !important;
     font-size: 15px;
 }
 
@@ -3134,7 +3141,7 @@ custom tab style start
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
-    color: var(--darkColor);
+    color: var(--text-highlight-color);
     padding: 14px 8px;
     position: relative;
     transition: .4s ease;
@@ -3148,18 +3155,19 @@ custom tab style start
     width: 0;
     height: 1px;
     border-radius: 10px;
-    background: var(--primary-normal);
+    background: var(--active-color);
     transition: .3s;
 }
 .eTab .nav-link.active{
-    color: var(--primary-normal) !important;
+    color: var(--active-color) !important;
+    background: var(--hover-background-color);
 }
 .eTab .nav-link.active::before{
     width: 100%;
 }
 
-.eTab .nav-tabs{
-    border-bottom: 1px solid var(--borderColor);
+.eTab.nav-tabs{
+    border-bottom: 1px solid var(--border-color);
     padding: 0 8px;
 }
 
@@ -3963,7 +3971,7 @@ custom tab style end
 }
 
 .toast-header {
-    color: var(--whiteColor);
+    color: var(--white-color);
     border-radius: 8px 8px 0px 0px;
     border-bottom: none;
 }
@@ -3976,7 +3984,7 @@ custom tab style end
 }
 
 .toast-body {
-    color: var(--whiteColor);
+    color: var(--white-color);
     border-radius: 0px 0px 8px 8px;
     padding: 0px 14px 14px 14px;
 }
@@ -4003,11 +4011,11 @@ custom tab style end
 }
 
 .category-footer a{
-    color: var(--txt-body-clr);
+    color: var(--text-color);
     transition: .3s;
 }
 .category-footer a:hover{
-    color: var(--txt-clr);
+    color: var(--text-highlight-color);
 }
 
 
@@ -4033,60 +4041,25 @@ i:not(.fas, .fa, .fab) {
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable,
 .select2-container--default .select2-results__option--selected {
     background-color: var(--gray-light-2) !important;
-    color: var(--primary-normal) !important;
+    color: var(--active-color) !important;
 }
 
 .select2-dropdown {
-    border-color: var(--gray-light-1) !important;
+    border-color: var(--border-color);
+    background-color: var(--border-color);
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
-    border: 1px solid var(--gray-light-1);
+    border: 1px solid var(--border-color);
     outline-color: transparent;
     border-radius: 5px;
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field:focus {
-    border: 1px solid var(--gray-light);
+    border: 1px solid var(--border-color);
 }
 
 /*End Select 2*/
-
-
-
-/*Summernote*/
-.note-editable {
-    background: var(--whiteColor);
-}
-
-.note-editor .dropdown-toggle::after {
-    display: none !important;
-}
-
-.note-dropdown-menu.dropdown-style {
-    min-width: 220px !important;
-}
-
-.note-dropdown-menu {
-    min-width: 347px !important;
-}
-
-.note-dropdown-item h1,
-.note-dropdown-item h2,
-.note-dropdown-item h3,
-.note-dropdown-item h4,
-.note-dropdown-item h5,
-.note-dropdown-item h6 {
-    font-size: 20px;
-}
-
-.note-btn.note-btn-primary.note-link-btn {
-    margin-top: -25px;
-}
-
-/*Summernote*/
-
-
 .visibility-hidden {
     visibility: hidden;
 }
@@ -4118,8 +4091,6 @@ i:not(.fas, .fa, .fab) {
 .tagify__tag__removeBtn:hover+div::before {
     box-shadow: 0 0 0 20px var(--gray-light-1) inset !important;
 }
-
-.tagify__tag:hover.tagify__tag__removeBtn:hover {}
 
 /* Tagify ended */
 
@@ -4227,11 +4198,11 @@ input.daterangepicker {
 .ol-btn-secondary {
     border-radius: 8px;
     padding: 10.5px 24px;
-    background: var(--rounded-dropdown-bg);
+    background: var(--hover-background-color);
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.01em;
-    color: var(--whiteColor);
+    color: var(--text-highlight-color);
     transition: .3s;
     border: none;
     text-align: center;
@@ -4239,13 +4210,13 @@ input.daterangepicker {
 }
 
 .ol-btn-secondary.show {
-    background: var(--rounded-dropdown-bg) !important;
-    color: var(--txt-body-clr) !important;
+    background: var(--hover-background-color) !important;
+    color: var(--text-color) !important;
 }
 
 .ol-btn-secondary:hover{
-    background: var(--rounded-dropdown-hover-bg) !important;
-    color: var(--txt-body-clr) !important;
+    background: var(--hover-background-color) !important;
+    color: var(--text-color) !important;
 }
 
 .ol-btn-danger {
@@ -4255,7 +4226,7 @@ input.daterangepicker {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.01em;
-    color: var(--whiteColor);
+    color: var(--white-color);
     transition: .3s;
     border: none;
     text-align: center;
@@ -4274,7 +4245,7 @@ input.daterangepicker {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.01em;
-    color: var(--whiteColor);
+    color: var(--white-color);
     transition: .3s;
     border: none;
     text-align: center;
@@ -4283,7 +4254,7 @@ input.daterangepicker {
 
 .ol-btn-success:hover {
     background-color: var(--success-dark);
-    color: var(--gray-light-2);
+    color: var(--white-color);
 }
 
 .icon.icon-confirm {
@@ -4303,7 +4274,7 @@ input.daterangepicker {
 
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
-    background-color: var(--primary-normal);
+    background-color: var(--active-color);
 }
 
 .daterangepicker td.in-range:not(.active),
@@ -4313,8 +4284,8 @@ input.daterangepicker {
 }
 
 .drp-buttons .applyBtn.btn-primary {
-    border-color: var(--primary-normal);
-    background-color: var(--primary-normal);
+    border-color: var(--active-color);
+    background-color: var(--active-color);
 }
 
 .drp-buttons .applyBtn.btn-primary:hover {
@@ -4324,27 +4295,27 @@ input.daterangepicker {
 /* pagination start */
 .active>.page-link,
 .page-link.active {
-    border-color: var(--btn-primary-bg-clr);
-    background-color: var(--btn-primary-bg-clr);
+    border-color: var(--active-color);
+    background-color: var(--active-color);
 }
 .page-link {
-    color: var(--btn-light-txt-clr);
+    color: var(--active-color);
     font-size: 13px;
-    border-color: var(--btn-light-bg-clr);
-    background-color: var(--btn-light-bg-clr);
+    border-color: var(--hover-background-color);
+    background-color: var(--hover-background-color);
 }
 
 .page-link:hover,.page-link:focus {
-    color: var(--btn-light-txt-hover-clr);
-    background-color: var(--btn-light-bg-hover-clr);
-    border-color: var(--btn-light-bg-hover-clr);
+    color: var(--white-color);
+    background-color: var(--active-color);
+    border-color: var(--active-color);
     box-shadow: none;
 }
 
 .disabled>.page-link,
 .page-link.disabled {
-    background-color: var(--btn-light-bg-clr);
-    border-color: var(--btn-light-bg-clr);
+    background-color: var(--hover-background-color);
+    border-color: var(--hover-background-color);
 }
 
 .pagination {
@@ -4354,16 +4325,16 @@ input.daterangepicker {
 
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
-    color: var(--primary-normal);
+    color: var(--active-color);
     font-size: 13px;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
 }
 
 .select2-container--default .select2-selection--multiple {
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 7.5px 5px;
     transition: .3s;
@@ -4376,7 +4347,7 @@ input.daterangepicker {
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border: solid var(--primary-normal) 1px;
+    border: solid var(--active-color) 1px;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
@@ -4399,8 +4370,8 @@ input.daterangepicker {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: var(--whiteColor);
-    border: 1px solid var(--borderColor);
+    background-color: var(--card-background-color);
+    border: 1px solid var(--card-background-color);
     width: 100%;
     max-height: 450px;
     /* Adjust as needed */
@@ -4409,7 +4380,7 @@ input.daterangepicker {
 
 
     border-radius: 8px;
-    box-shadow: 0px 4px 40px 0px var(--box-shadow-color);
+    box-shadow: 0px 4px 40px 0px var(--shadow);
     padding: 8px;
     border: none;
     z-index: 99;
@@ -4428,7 +4399,7 @@ input.daterangepicker {
 
 .custom-dropdown .dropdown-list li a {
     border-radius: 4px;
-    color: var(--darkColor);
+    color: var(--text-color);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4437,8 +4408,8 @@ input.daterangepicker {
 }
 
 .custom-dropdown .dropdown-list li a:hover {
-    background: var(--gray-);
-    color: var(--skinColor);
+    background: var(--hover-background-color);
+    color: var(--active-color);
 }
 
 /* Custom dropdown */
@@ -4454,7 +4425,7 @@ input.daterangepicker {
         right: 0 !important;
         z-index: 33333 !important;
         width: 100% !important;
-        background: var(--whiteColor) !important;
+        background: var(--white-color) !important;
         height: max-content !important;
         display: inline-table;
     }
@@ -4467,12 +4438,19 @@ input.daterangepicker {
 /* Print content ENDED*/
 
 .chart-widget-list p{
-    border-bottom: 1px solid var(--line-clr);
+    border-bottom: 1px solid var(--line-color);
 }
 
 .form-check-input:checked {
-    background-color: var(--primary-normal) !important;
-    border-color: var(--primary-normal) !important;
+    background-color: var(--active-color) !important;
+    border-color: var(--active-color) !important;
+}
+
+.badge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 11px;
 }
 
 .badge.bg-success {
@@ -4500,18 +4478,18 @@ input.daterangepicker {
 }
 
 .badge.bg-secondary {
-    background-color: var(--gray-light-2) !important;
+    background-color: var(--hover-background-color) !important;
     border-radius: 5px;
-    color: var(--gray-normal) !important;
+    color: var(--text-highlight-color) !important;
     border: 1px solid var(--gray-normal) !important;
     font-weight: 600;
 }
 
 .badge.bg-primary {
-    background-color: var(--primary-normal) !important;
+    background-color: var(--active-color) !important;
     border-radius: 5px;
-    color: var(--primary-normal) !important;
-    border: 1px solid var(--primary-normal) !important;
+    color: var(--active-color) !important;
+    border: 1px solid var(--active-color) !important;
     font-weight: 600;
 }
 
@@ -4520,11 +4498,11 @@ input.daterangepicker {
 }
 
 .edit-badge {
-    border: 1px solid var(--primary-normal);
-    background-color: var(--whiteColor);
+    border: 1px solid var(--active-color);
+    background-color: var(--white-color);
     border-radius: 5px;
     padding: 5px 10px;
-    color: var(--primary-normal) !important;
+    color: var(--active-color) !important;
     font-size: 15px;
 }
 
@@ -4532,15 +4510,15 @@ input.daterangepicker {
     background-color: var(--gray-light-1);
     padding: 35px 70px;
     border-radius: 10px;
-    color: var(--primary-normal);
+    color: var(--active-color);
     text-align: center;
-    border: 1px solid var(--primary-normal);
+    border: 1px solid var(--active-color);
     border-style: dashed;
     width: 100%;
 }
 
 .add-section-block:hover {
-    box-shadow: 0px 5px 20px var(--primary-normal);
+    box-shadow: 0px 5px 20px var(--active-color);
 }
 
 .add-section-block .sub-title {
@@ -4549,37 +4527,12 @@ input.daterangepicker {
 
 .add-section-block .title,
 .add-section-block .sub-title {
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
-
-/* summernote editor style start */
-.note-btn {
-    border-radius: 8px;
-    border: 1px solid var(--gray-light-1);
-}
-
-.note-editor .note-toolbar .note-color .dropdown-toggle,
-.note-popover .popover-content .note-color .dropdown-toggle {
-    height: 32px;
-}
-
-.note-editable ul {
-    list-style: disc !important;
-    list-style-position: inside !important;
-}
-
-.note-editable ol {
-    list-style: decimal !important;
-    list-style-position: inside !important;
-}
-
-/* summernote editor style end */
-
-
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
     background-color: var(--gray-light-2);
-    color: var(--primary-normal);
+    color: var(--active-color);
 }
 
 .category-card .card-img-top {
@@ -4667,7 +4620,7 @@ input.daterangepicker {
 }
 
 .bg-upcoming {
-    background-color: var(--primary-normal);
+    background-color: var(--active-color);
 }
 
 .bg-pending {
@@ -4675,21 +4628,21 @@ input.daterangepicker {
 }
 
 .bg-private {
-    background-color: var(--darkColor);
+    background-color: var(--text-color);
 }
 
 .bg-draft {
-    background-color: var(--gray-normal);
+    background-color: var(--text-highlight-color);
 }
 
 .bg-inactive,
 .bg-deactivate {
-    background-color: var(--gray-light-1);
+    background-color: var(--hover-background-color);
 }
 
 .badge.bg-deactivate,
 .badge.bg-inactive {
-    color: var(--gray-dark);
+    color: var(--text-color);
 }
 
 .radious-15px {
@@ -4705,7 +4658,7 @@ input.daterangepicker {
 }
 
 .text-premium {
-    color: var(--primary-normal) !important;
+    color: var(--active-color) !important;
 }
 
 .modal-spinner-border {
@@ -4719,31 +4672,101 @@ input.daterangepicker {
 }
 
 .list-group .list-group-item{
-    background-color: var(--card-bg-clr);
-    color: var(--txt-body-clr) !important;
-    border-color: var(--line-clr);
+    background-color: var(--card-background-color);
+    color: var(--text-color) !important;
+    border-color: var(--line-color);
 }
 
-.note-editable, .form-control, .ol-form-control, .ol-form-control:focus, .form-control:focus{
-    background-color: var(--input-bg-clr);
-    color: var(--input-txt-clr);
-}
+
 .ol-form-control::placeholder{
     color: var(--gray-light) !important;
 }
 /* custom.css ended */
 
 .offcanvas{
-    background-color: var(--gray-light-1);
+    background-color: var(--card-background-color);
 }
 .select2-container--default .select2-selection--single{
-    background-color: var(--gray-light-1);
-    color: var(--gray-dark);
+    background-color: var(--input-background);
+    color: var(--text-color);
 }
+
+
+/*Summernote*/
+.note-editable {
+    background: var(--input-background);
+}
+.note-editable, .form-control, .ol-form-control, .ol-form-control:focus, .form-control:focus{
+    background-color: var(--input-background);
+    color: var(--text-color);
+}
+.note-editor .dropdown-toggle::after {
+    display: none !important;
+}
+
+.note-dropdown-menu.dropdown-style {
+    min-width: 220px !important;
+}
+
+.note-dropdown-menu {
+    min-width: 347px !important;
+}
+
+.note-dropdown-item h1,
+.note-dropdown-item h2,
+.note-dropdown-item h3,
+.note-dropdown-item h4,
+.note-dropdown-item h5,
+.note-dropdown-item h6 {
+    font-size: 20px;
+}
+
+.note-btn.note-btn-primary.note-link-btn {
+    margin-top: -25px;
+}
+
+.note-editor.note-airframe .note-statusbar, .note-editor.note-frame .note-statusbar {
+    background-color: var(--border-color);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 1px solid var(--border-color);
+}
+
 .note-toolbar{
-    background-color: var(--gray-light-1);
+    background-color: var(--border-color);
+    border-color: var(--line-color);
 }
 .note-toolbar .note-btn{
-    background-color: var(--gray-light);
-    color: var(--darkColor);
+    background-color: var(--hover-background-color);
+    color: var(--active-color);
+    border-radius: 8px;
+    border: 1px solid var(--hover-background-color);
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.note-btn.active, .note-btn.focus, .note-btn:active, .note-btn:focus, .note-btn:hover {
+    background-color: var(--active-color);
+    border: 1px solid var(--active-color);
+    color: var(--white-color);
+}
+
+.note-editor .note-toolbar .note-color .dropdown-toggle,
+.note-popover .popover-content .note-color .dropdown-toggle {
+    height: 32px;
+}
+
+.note-editable ul {
+    list-style: disc !important;
+    list-style-position: inside !important;
+}
+
+.note-editable ol {
+    list-style: decimal !important;
+    list-style-position: inside !important;
+}
+/*Summernote*/
+
+.offcanvas-title{
+    color: var(--text-highlight-color);
 }
